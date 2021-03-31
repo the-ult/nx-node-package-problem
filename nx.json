@@ -1,0 +1,24 @@
+{
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "affected": { "defaultBase": "master" },
+  "npmScope": "nx-node-package-problem",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
+    }
+  },
+  "projects": {
+    "sample-ng": { "tags": [] },
+    "sample-ng-e2e": { "tags": [], "implicitDependencies": ["sample-ng"] },
+    "shared-environment": { "tags": [] },
+    "express-app": { "tags": [] }
+  }
+}
